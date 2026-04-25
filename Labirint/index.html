@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ultimate Maze Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Лабиринт Судьбы</h1>
+
+        <div class="setup-panel">
+            <input type="text" id="playerName" placeholder="Твоё имя" maxlength="10">
+            <button onclick="resetGame()">Новая игра</button>
+        </div>
+
+        <div class="info-panel">
+            <div class="stat">👣 <span id="step-count">0</span></div>
+            <div class="stat">💰 <span id="coin-count">0</span></div>
+        </div>
+
+        <div class="canvas-wrapper">
+            <canvas id="mazeCanvas" width="600" height="600"></canvas>
+        </div>
+
+        <div id="mobile-controls" class="mobile-controls">
+            <div class="row"><button id="btn-up">▲</button></div>
+            <div class="row">
+                <button id="btn-left">◀</button>
+                <button id="btn-down">▼</button>
+                <button id="btn-right">▶</button>
+            </div>
+        </div>
+
+        <div class="leaderboard">
+            <h2>🏆 Рекорды (шаги)</h2>
+            <ul id="high-scores"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
